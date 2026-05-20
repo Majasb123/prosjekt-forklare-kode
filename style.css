@@ -11,6 +11,14 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Rubik", sans-serif;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -21,29 +29,14 @@ img {
     max-width: 100%;
 }
 
-header {
+ header.home {
     min-height: 80vh;
     position: relative;
-    display: flex;
-    flex-direction: column;
-}
+} 
 
 .container {
     max-width: 90%;
     margin: 0 auto;
-
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: "Rubik", sans-serif;
-}
-
-p {
-    font-family: "Rubik", sans-serif;
 }
 
 nav {
@@ -51,7 +44,7 @@ nav {
     justify-content: space-between;
     position: relative;
     padding: 20px 0;
-    z-index: 10;
+    z-index: 10; 
     width: 90%;
     margin: 0 auto;
     align-items: center;
@@ -91,11 +84,10 @@ nav {
 
 #logo {
     width: 75px;
-    top: 20px;
 }
 
 
-.bg {
+.bg.index {
     background-image: url(images/hero.png);
     position: absolute;
     top: 0;
@@ -114,27 +106,24 @@ section {
     min-height: 80vh;
 }
 
+section.home {
+    padding: 75px 0;
+}
+
 .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    padding: 20px;
 
     margin: 0 auto;
     align-self: center;
     max-height: 100%;
+
+    padding-top: 20px;
 }
 
 
-section:first-of-type {
-    /*  display: flex;
-    flex-direction: column;
-    justify-content: center;  */
-    margin-top: 100px;
-}
-
-section:first-of-type h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+section.home h2 {
     color: var(--main-blue);
     font-size: 3rem;
     margin-bottom: 30px;
@@ -145,7 +134,7 @@ section:first-of-type h2 {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     overflow: hidden;
 }
 
@@ -203,7 +192,7 @@ section:first-of-type h2 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 280px;
+    height:0;
 
     z-index: 1;
 
@@ -216,7 +205,7 @@ section:first-of-type h2 {
     opacity: 0;
 
     transition: 0.3s;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 2;
 
     background-color: rgba(255, 255, 255, 0.85);
@@ -227,6 +216,8 @@ section:first-of-type h2 {
 .card.active .info {
     opacity: 1;
     overflow: scroll;
+    height: 280px;
+    transition: 0.5s;
 }
 
 section:last-of-type {
@@ -238,7 +229,6 @@ section:last-of-type {
 
 
 .flex-wrapper {
-    max-width: 80%;
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -249,8 +239,6 @@ section:last-of-type {
 .flex-wrapper img {
     flex: 1;
     max-width: 450px;
-    width: 100%;
-
 }
 
 .content {
@@ -269,10 +257,13 @@ h3 {
 
 
 footer {
-  
+
     background-color: var(--main-blue);
     border-radius: 35px 35px 0 0;
 
+}
+
+footer .container {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -284,7 +275,6 @@ footer {
 
 footer ul {
     display: flex;
-    flex-wrap: wrap;
     gap: 50px;
     list-style-type: none;
     font-size: 20px;
@@ -311,12 +301,249 @@ footer a {
     color: white;
 }
 
-.copyright{
-  font-size: 14px;
-  color: white;
+.copyright {
+    font-size: 14px;
+    color: white;
 }
 
 
+
+/* skincare siden */
+
+.img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+
+}
+
+.img-grid img {
+    object-fit: cover;
+    aspect-ratio: 7/4;
+}
+
+h2.skincare {
+    font-size: 45px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1.8px;
+    color: var(--main-blue);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+header.skincare {
+    padding: 50px 0;
+    background: linear-gradient(white, var(--main-purple-light));
+    min-height: 40vh;
+
+}
+
+header.skincare .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img-grid img:first-of-type {
+    border-radius: 20px 0 0 20px;
+}
+
+.img-grid img:last-of-type {
+    border-radius: 0 20px 20px 0;
+}
+
+.nav-links.skincare a {
+    color: var(--main-blue);
+}
+
+.form {
+    display: flex;
+    gap: 15px;
+}
+
+input {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    max-width: 150px;
+    background-color: var(--main-blue);
+    color: white;
+}
+
+input:hover {
+    background-color: var(--main-purple-light);
+    color: var(--main-blue);
+}
+
+.customer-club {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form button {
+    background-color: rgb(255, 255, 255);
+    color: var(--main-blue);
+    border: none;
+    padding: 15px;
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+.form button:hover {
+    background-color: rgb(215, 215, 215);
+    cursor: pointer;
+}
+
+section.skincare-2 {
+    background: white;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    margin-bottom: 20px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+}
+
+
+.product img {
+    max-width: 260px;
+    transition: 0.4s; 
+}
+
+.product img:hover {
+    transform: scale(1.2) rotate(-5deg);
+
+}
+
+.product:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.product img {
+    flex: 2;
+}
+
+.product .content {
+    flex: 1;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.old-price {
+    color: grey;
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.new-price {
+    color: var(--discount-pink);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* sunscreen */
+
+.nav-links.sunscreen a {
+    color: var(--main-blue);
+
+}
+
+.nav-links.sunscreen {
+    background-color: rgba(255, 255, 255);
+    padding: 20px;
+}
+
+
+.sun i,
+.moon i {
+    color: var(--main-blue);
+    font-size: 40px;
+}
+
+.sun,
+.moon {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+}
+
+.sun {
+    display: none;
+
+}
+
+.moon {
+    display: block;
+}
+
+body.sunscreen {
+    background-image: url(./images/sky-day.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body.sunscreen.active {
+    background-image: url(./images/sky-night.png);
+}
+
+section.sun-products {
+    background: none;
+}
+
+section.sun-products .container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+
+}
+
+.sun-card {
+    position: relative;
+    aspect-ratio: 1/1;
+    background-color: white;
+
+}
+
+.sun-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+.night-product {
+    opacity: 0;
+}
+
+body.sunscreen.active .day-product {
+    opacity: 0;
+}
+
+body.sunscreen.active .night-product {
+    opacity: 1;
+}
 
 @media (max-width: 900px) {
 
@@ -341,11 +568,14 @@ footer a {
         font-size: 14px;
     }
 
-
-
 }
 
 @media (max-width: 700px) {
+
+    .sun,
+    .moom {
+        left: 80px;
+    }
 
     .bg {
         background-position: center top;
@@ -368,6 +598,11 @@ footer a {
         max-width: 0px;
         overflow: hidden;
 
+    }
+
+    .sun,
+    .moon {
+        left: 70px;
     }
 
 
@@ -411,6 +646,98 @@ footer a {
         grid-template-columns: 1fr;
     }
 
+    .form {
+        flex-direction: column;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    h2.skincare {
+        font-size: 34px;
+    }
+
+    .img-grid {
+        aspect-ratio: 3/1;
+    }
+
+    .bg {
+        border-radius: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    section.home {
+        padding: 40px 0;
+    }
+
+    header.home {
+        max-height: 60vh;
+    }
+
+    footer i {
+        font-size: 20px;
+    }
+
+    footer ul {
+        font-size: 16px;
+    }
+
+    .new-price {
+        font-size: 18px;
+    }
+
+    .old-price {
+        font-size: 12px;
+    }
+
+    .product img {
+        max-width: 150px;
+    }
+
+    footer .container {
+        gap: 30px;
+        padding: 30px 15px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+
+    }
+
+    .bg.index {
+        border-radius: 0;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+    footer ul li {
+        flex-direction: column;
+        gap: 8px; 
+    }
+
+    .customer-club h3 {
+        text-align: center;
+    }
+
+    .customer-club p {
+        text-align: center;
+    }
+
+    .price {
+        flex-direction: column;
+    }
+
+    section.sun-products .container {
+        grid-template-columns: minmax(200px, 1fr);
+    }
 
 
 }
